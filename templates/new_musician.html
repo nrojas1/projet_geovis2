@@ -1,0 +1,99 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<button id="tohome" onclick="redirect_home()" style="float:right;">Home</button>
+<h2 style="text-align:center">Hello there musician</h2>
+<p>In order to add you to the map, we need a little information about yourself</p>
+<form method= "post" id="new_musician" action="{{ url_for('db_update') }}">
+  <table>
+    <tr><td>Name: </td><td><input type="text" name="name" placeholder="Pedro" value="" size=8 required></td></tr>
+    <tr><td>Familyname: </td><td><input type="text" name="lastname" placeholder="Rodriguez" value="" size=8 required></td></tr>
+    <tr><td>Email: </td><td><input type="email" name="email" value="" placeholder="example@mail.com" size=16 required></td></tr>
+    <tr><td>Where do you live?: </td><td><input id="lat" name="latitude" placeholder="click on" value="" size=7 required> / <input id="lng" name="longitude" placeholder="map!" value="" size=6 required></td></tr>
+  </table>
+
+  <br><h4>Now for the musical part:</h4>
+  <table>
+    <tr>
+      <td>Instrument:</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="instrument" value="Accordion" required> Accordion</td>
+      <td><input type="radio" name="instrument" value="Bass guitar" required> Bass guitar</td>
+      <td><input type="radio" name="instrument" value="Clarinet" required> Clarinet</td>
+      <td><input type="radio" name="instrument" value="Double bass" required> Double bass</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="instrument" value="Drum kit" required> Drum kit</td>
+      <td><input type="radio" name="instrument" value="Flute" required> Flute</td>
+      <td><input type="radio" name="instrument" value="Guitar" required> Guitar</td>
+      <td><input type="radio" name="instrument" value="Harmonica" required> Harmonica</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="instrument" value="Harp" required> Harp</td>
+      <td><input type="radio" name="instrument" value="Marimba" required> Marimba</td>
+      <td><input type="radio" name="instrument" value="Piano" required> Piano</td>
+      <td><input type="radio" name="instrument" value="Saxophone" required> Saxophone</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="instrument" value="Trombone" required> Trombone</td>
+      <td><input type="radio" name="instrument" value="Trumpet" required> Trumpet</td>
+      <td><input type="radio" name="instrument" value="Violin" required> Violin<br></td>
+      <td><input type="radio" name="instrument" value="Vocal cords" required> Vocal cords<br></td>
+    </tr>
+  </table>
+  <br>
+  <table>
+    <tr>
+      <td>Experience(s): </td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="skill" value="Composition/Arrangement"> Composition/Arrangement</td>
+      <td><input type="checkbox" name="skill" value="Recording"> Recording</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="skill" value="Improvisation/Jamm"> Improvisation/Jamm</td>
+      <td><input type="checkbox" name="skill" value="Performance"> Performance</td>
+    </tr>
+  </table>
+
+  <br>
+  <table>
+    <tr>
+      <td>Genre(s): </td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="genre" value="Alternative"> Alternative</td>
+      <td><input type="checkbox" name="genre" value="Blues"> Blues</td>
+      <td><input type="checkbox" name="genre" value="Brazilian"> Brazilian </td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="genre" value="Classical"> Classical</td>
+      <td><input type="checkbox" name="genre" value="Country"> Country</td>
+      <td><input type="checkbox" name="genre" value="Dance"> Dance </td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="genre" value="Gospel"> Gospel </td>
+      <td><input type="checkbox" name="genre" value="Hip Hop/Rap"> Hip Hop/Rap </td>
+      <td><input type="checkbox" name="genre" value="Indie"> Indie </td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="genre" value="Jazz"> Jazz </td>
+      <td><input type="checkbox" name="genre" value="Metal"> Metal </td>
+      <td><input type="checkbox" name="genre" value="Opera"> Opera </td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="genre" value="Pop"> Pop </td>
+      <td><input type="checkbox" name="genre" value="Reggae"> Reggae </td>
+      <td><input type="checkbox" name="genre" value="Rhythm and Blues/Soul"> Rhythm and Blues/Soul </td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="genre" value="Rock"> Rock </td>
+      <td><input type="checkbox" name="genre" value="Singer/Songwriter"> Singer/Songwriter </td>
+      <td><input type="checkbox" name="genre" value="World"> World </td>
+    </tr>
+  </table>
+  <button onclick="new_musician()">submit</button>
+</form>
+
+{% endblock %}

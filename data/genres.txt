@@ -1,0 +1,19 @@
+	Alternative
+	Blues
+	Brazilian
+	Classical
+	Country
+	Dance
+	Gospel
+	Hip Hop/Rap
+	Indie
+	Jazz
+	Metal
+	Opera
+	Pop
+	Reggae
+	Rhythm and Blues/Soul
+	Rock
+	Singer/Songwriter
+	World
+123	NA

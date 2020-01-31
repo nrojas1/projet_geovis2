@@ -1,0 +1,48 @@
+body{
+  margin:0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.header{
+  margin: 0;
+  padding-left: 10px;
+  width: auto;
+  height: auto;
+  background-color: #FBEEC1;
+  position: static;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button{
+  background-color: #f1f1f1;
+  color: black;
+}
+
+#map{
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+#box{
+  position: absolute;
+  bottom: 100px;
+  right:1px;
+  height: 300px;
+  width: 280px;
+}
+
+.leaflet-interactive:hover{
+  weight: 1;
+  color: '#fff';
+  background-color: 'red';
+}
+
+tr.unsel td {
+  opacity: 0.3;
+}

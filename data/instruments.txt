@@ -1,0 +1,16 @@
+	Accordion
+	Bass guitar
+	Clarinet
+	Double bass
+	Drum kit
+	Flute
+	Guitar
+	Harmonica
+	Harp
+	Marimba
+	Piano
+	Saxophone
+	Trombone
+	Trumpet
+	Violin
+	Vocal cords
